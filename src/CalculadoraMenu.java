@@ -19,9 +19,10 @@ public class CalculadoraMenu {
 			System.out.println("2 => Subtração ");
 			System.out.println("3 => Multiplicação ");
 			System.out.println("4 => Divisão ");
-			System.out.println("5 => Sair ");
+			System.out.println("5 => Porcentagem ");
+			System.out.println("6 => Sair ");
 			
-			System.out.print("\nDigite o numero do menu [1,2,3,4,5] => ");
+			System.out.print("\nDigite o numero do menu [1,2,3,4,5,6] => ");
 			opcao = sc.nextInt();
 			
 			switch (opcao) {
@@ -45,8 +46,7 @@ public class CalculadoraMenu {
 				System.out.println("\n---- Operação realizada com sucesso ----");
 				
 				System.exit(soma);
-				
-							
+											
 				break;			
 				
 			
@@ -122,20 +122,37 @@ public class CalculadoraMenu {
 				
 				System.exit(divisao);
 								
-				
 				}
 			
-						
+
+			case 5:{
+				
+				System.out.println("\n---- Operação Porcentagem ----");
+				
+				System.out.print("\nInforme o numero para calcular a porcentagem: ");
+				num1 = sc.nextInt();
+								
+				System.out.print("Quantos porcento ? ");
+				num2 = sc.nextInt();
+								
+				double calcularPorcentagem = (num1 * num2)  / 100;
+				
+				System.out.print("\n" + num2 + " % do numero " + num1 + " é igual => " + calcularPorcentagem + "\n");
+								
+				System.out.println("\n---- Operação realizada com sucesso ----");
+				
+				System.exit((int) calcularPorcentagem);
+									
+				}
+			
 			}
 			
-			
-		} while (opcao !=5);
+		} while (opcao !=6);
 		
 		System.out.println("");
 		
-		System.out.println("\nOpção Sair [5] digitada , a calculadora foi encerrada com sucesso!!");
-	
-				
+		System.out.println("Opção Sair [6] digitada , a calculadora foi encerrada.");
+					
 		sc.close();			
 		
 	}
